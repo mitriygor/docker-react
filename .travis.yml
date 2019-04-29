@@ -2,8 +2,8 @@ sudo: required
 services:
   - docker
 
-before install:
-  - docker build -t udemy-docker-react-test-image -f Dockerfile.dev .
+before_install:
+  - docker build -t mytrgor/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run udemy-docker-react-test-image npm run test -- --coverage
+  - docker run mytrgor/docker-react npm run test -- --coverage
